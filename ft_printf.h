@@ -6,25 +6,19 @@
 /*   By: elsouza <elsouza@student.42porto.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:40:40 by elsouza           #+#    #+#             */
-/*   Updated: 2026/09/03 22:53:41 by elsouza          ###   ########.fr       */
+/*   Updated: 2026/11/07 13:03:43 by elsouza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
+# ifdef __linux__
+#  define PTR_NULL "(nil)"
+# else
+#  define PTR_NULL "0x0"
+# endif
 # include <unistd.h>
 # include <stdarg.h>
-
-typedef struct s_spec
-{
-	int	minus;
-	int	zero;
-	int	hash;
-	int	space;
-	int	plus;
-	int	width;
-	int	precision;
-}	t_spec;
 
 int	print_char(char c);
 int	print_str(const char *str);

@@ -6,7 +6,7 @@
 /*   By: elsouza <elsouza@student.42porto.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 14:55:00 by elsouza           #+#    #+#             */
-/*   Updated: 2026/09/03 22:51:43 by elsouza          ###   ########.fr       */
+/*   Updated: 2026/11/07 13:02:06 by elsouza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ int	print_ptr(void *ptr)
 	int	count;
 	int	i;
 
+	if (!ptr)
+		return (print_str(PTR_NULL));
 	count = print_str("0x");
 	if (count == -1)
 		return (-1);
